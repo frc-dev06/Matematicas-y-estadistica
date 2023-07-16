@@ -15,3 +15,14 @@ function triangulo(l1,l2,base,altura){
     }
 }
 console.groupEnd('triangulo')
+
+console.group('circulo')
+function circunferencia(r){
+    let pi= Math.PI
+    return {
+        perimetro: (2*pi*r).toFixed(2),
+        area: Math.round(pi*Math.pow(r,2))
+    }
+}
+circunferencia(8)
+console.groupEnd('circulo')
