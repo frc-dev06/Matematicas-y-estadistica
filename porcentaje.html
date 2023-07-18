@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            gap:1.5rem;
+        }
+        input{
+            height: 2rem;
+            border-radius: .7rem;
+            padding: .4rem;
+        }
+        button{
+            width: 100px;
+            align-self: center;
+            border-radius: 5px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <input type="text" class="valor" placeholder="ingresa el precio">
+        <input type="text" class="porcentaje" placeholder="porcentaje">
+        <button class="calcular">Calcular</button>
+        <p class="resultado"></p>
+    </section>
+    <script src="porcentaje.js"></script>
+</body>
+</html>

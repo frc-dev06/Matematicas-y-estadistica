@@ -37,7 +37,7 @@ function alturaTrianguloEscaleno(l1,l2,l3){
     hB: (2*A)/l2,
     hC: (2*A)/l3
    }
-   return {h, A}
+   return {h, A}  
 }
 console.groupEnd('triangulo')
 
