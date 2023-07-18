@@ -14,7 +14,10 @@
         section{
             display: flex;
             flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
             gap:1.5rem;
+
         }
         input{
             height: 2rem;
@@ -31,10 +34,16 @@
 </head>
 <body>
     <section>
-        <input type="text" class="valor" placeholder="ingresa el precio">
-        <input type="text" class="porcentaje" placeholder="porcentaje">
+        <label for="">Ingresa el valor: 
+        </label>
+            <input type="text" class="valor" placeholder="ingresa el precio">
+        <label for="">Ingresa el porcentaje:
+        </label>
+            <input type="text" class="porcentaje" placeholder="porcentaje">
         <button class="calcular">Calcular</button>
+
         <p class="resultado"></p>
+          
     </section>
     <script src="porcentaje.js"></script>
 </body>

@@ -1,24 +1,25 @@
-const num = document.querySelector(".valor")
-const porcentaje = document.querySelector(".porcentaje")
-const resul = document.querySelector(".resultado")
+const inputPrice = document.querySelector(".valor")
+const inputCoupon = document.querySelector(".porcentaje")
+const pResult = document.querySelector(".resultado")
 const btn = document.querySelector(".calcular")
 
-function calcularDescuento(val, porcentaje) {
-    let descuento = val - ((val / 100) * porcentaje)
-    resul.innerText = `El descuento aplicado a $${val} es de ${descuento}`
-}
 
-btn.addEventListener('click', function () {
-    if (num.value != '' && porcentaje.value != '') {
-        if (parseFloat(porcentaje.value) <= 100) {
-            let valor = parseFloat(num.value)
-            let porcent = parseFloat(porcentaje.value)
-            calcularDescuento(valor, porcent)
+
+btn.addEventListener('click', calcularPrecioConDescuento)
+
+function calcularPrecioConDescuento(){
+    let precio=Number(inputPrice.value);
+    let descuento= Number(inputCoupon.value);
+    console.log({precio,descuento})
+
+    if(precio!='' && descuento!=''){
+        if(descuento<=100){
+            let newDescuento= (precio*(100-descuento)/100);
+            pResult.innerText=`El nuevo precio es ${newDescuento}`
         }else{
-            alert('El descuento no puede ser superior a 100%')
-            porcentaje.value=''
+            pResult.innerText='!El descuento no puede superar el 100%!'
         }
-    } else {
-        alert('aseurate de llenar los campos')
+    }else{
+        pResult.innerText='¡LLENA LOS DATOS SOLICITADOS!'
     }
-})
+}
